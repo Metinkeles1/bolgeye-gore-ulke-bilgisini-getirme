@@ -1,0 +1,112 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    background: #191724;
+    color: #ffffff;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #b3b3b3;
+}
+
+.text-input {
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2f2c45;
+    background: #272530;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.label::before {
+    content: "";
+    height: 5px;
+    background: #272530;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-input:focus {
+    border: 2px solid #7e4ccb;
+}
+
+.text-input:focus+.label,
+.filled {
+    top: -10px;
+    color: #7e4ccb;
+    font-size: 14px;
+}
+
+.text-input::placeholder {
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.text-input:focus::placeholder {
+    opacity: 1;
+}
+
+
+/* my codes */
+
+.col-6 img {
+    height: 150px;
+}
+
+#details {
+    opacity: 0;
+}
+
+#loading {
+    display: none;
+}
+
+.card-bg {
+    background-color: #2C394B;
+    color: #D2D2D2;
+}
+
+.neighbors-bg {
+    background-color: #334756;
+    color: #082032;
+}
+
+.card-neighbors-bg {
+    /* background: -webkit-linear-gradient(to left, #082032, #2C394B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    background-image: linear-gradient(to left, #082032, #2C394B);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 10px;
+    color: #D2D2D2;
+}
