@@ -9,7 +9,7 @@ document.querySelectorAll(".text-input").forEach((element) => {
 });
 
 
-// let text = document.querySelector("#txtSearch").value = "türk";
+let text = document.querySelector("#txtSearch").value = "türk";
 
 document.querySelector("#btnSearch").addEventListener("click", () => {
     let text = document.querySelector('#txtSearch').value;
