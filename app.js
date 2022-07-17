@@ -136,9 +136,9 @@ function renderNeighbors(data) {
     let html = "";
     for (let country of data) {
         html += `
-        <div class="col-6 col-md-2 col-lg-2  mt-2">
+        <div class="col-6 col-md-3 col-lg-2 mt-2">
             <div class="card card-neighbors-bg">                    
-                <img src="${country.flags.png}" class="card-image-top ">  
+                <img src="${country.flags.png}" class="card-image-top img-fluid">  
                 <div class="card-body">
                     <p class="card-text">${country.name.common}</p>
                 </div>
@@ -193,26 +193,26 @@ let settings = {
 
 init(settings);
 
-document.querySelector('.carousel-control-prev-icon').addEventListener('click', function() {
+document.querySelector('.carousel-control-prev-icon').addEventListener('click', () => {
     index--;
     showSlide(index);
     console.log(index);
 });
 
-document.querySelector('.carousel-control-next-icon').addEventListener('click', function() {
+document.querySelector('.carousel-control-next-icon').addEventListener('click', () => {
     index++;
     showSlide(index);
     console.log(index);
 });
 
-document.querySelectorAll('.arrow').forEach(function(item) {
-    item.addEventListener('mouseenter', function() {
+document.querySelectorAll('.arrow').forEach((item) => {
+    item.addEventListener('mouseenter', () => {
         clearInterval(interval);
     })
 });
 
-document.querySelectorAll('.arrow').forEach(function(item) {
-    item.addEventListener('mouseleave', function() {
+document.querySelectorAll('.arrow').forEach((item) => {
+    item.addEventListener('mouseleave', () => {
         init(settings);
     })
 });
@@ -245,7 +245,7 @@ function init(settings) {
 
 }
 
-function showSlide(i) {
+showSlide = (i) => {
 
     index = i;
 

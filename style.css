@@ -88,14 +88,14 @@ body {
 /** carousel style */
 
 .carousel-item img {
-    height: 500px;
+    max-height: 500px;
 }
 
 
 /** my codes */
 
 .card-neighbors-bg img {
-    width: 200px;
+    height: 130px;
 }
 
 #details {
@@ -117,9 +117,6 @@ body {
 }
 
 .card-neighbors-bg {
-    /* background: -webkit-linear-gradient(to left, #082032, #2C394B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     background-image: linear-gradient(to left, #082032, #2C394B);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     margin-top: 10px;
