@@ -42,7 +42,7 @@ document.querySelector("#btnSearch").addEventListener("click", () => {
     document.querySelector("#details").style.opacity = 0;
     document.querySelector("#details").style.display = "block";
     document.querySelector("#loading").style.display = "block";
-    document.querySelector("#carousel-display").style.display = "none";
+    document.querySelector(".carousel").style.display = "none";
     getCountry(text);
 });
 
@@ -182,11 +182,11 @@ const models = [{
     }
 ];
 
-var index = 0;
-var slaytCount = models.length;
-var interval;
+let index = 0;
+let slaytCount = models.length;
+let interval;
 
-var settings = {
+let settings = {
     duration: '2000',
     random: false
 };
