@@ -1,3 +1,4 @@
+//* input
 document.querySelectorAll(".text-input").forEach((element) => {
     element.addEventListener("blur", (event) => {
         if (event.target.value != "") {
@@ -8,14 +9,40 @@ document.querySelectorAll(".text-input").forEach((element) => {
     });
 });
 
+//* carousel
+// let indexValue = 1;
+// showImg(indexValue);
 
-// let text = document.querySelector("#txtSearch").value = "türk";
+// function btm_slide(e) { showImg(indexValue = e); }
+
+// function side_slide(e) { showImg(indexValue += e); }
+
+// function showImg(e) {
+//     let i;
+//     const img = document.querySelectorAll('img');
+//     const slider = document.querySelectorAll('.btm-slides span');
+//     if (e > img.length) { indexValue = 1 }
+//     if (e < 1) { indexValue = img.length }
+//     for (i = 0; i < img.length; i++) {
+//         img[i].style.display = "none";
+//     }
+//     for (i = 0; i < slider.length; i++) {
+//         slider[i].style.background = "rgba(255,255,255,0.1)";
+//     }
+//     img[indexValue - 1].style.display = "block";
+//     slider[indexValue - 1].style.background = "white";
+// }
+
+//* country
+let text = document.querySelector("#txtSearch").value = "türk";
 
 document.querySelector("#btnSearch").addEventListener("click", () => {
     let text = document.querySelector('#txtSearch').value;
     console.log(text)
     document.querySelector("#details").style.opacity = 0;
+    document.querySelector("#details").style.display = "block";
     document.querySelector("#loading").style.display = "block";
+    document.querySelector("#carousel-display").style.display = "none";
     getCountry(text);
 });
 
@@ -109,7 +136,7 @@ function renderNeighbors(data) {
     let html = "";
     for (let country of data) {
         html += `
-        <div class="col-6 col-md-2 mt-2">
+        <div class="col-6 col-md-2 col-lg-2  mt-2">
             <div class="card card-neighbors-bg">                    
                 <img src="${country.flags.png}" class="card-image-top ">  
                 <div class="card-body">
@@ -134,4 +161,103 @@ function renderError(err) {
         document.querySelector("#errors").innerHTML = "";
     }, 3000);
     document.querySelector("#errors").innerHTML = html;
+}
+
+
+//* carousel-js
+const models = [{
+        name: 'Türkiye',
+        image: 'img/1.jpg',
+        link: 'https://goturkiye.com/'
+    },
+    {
+        name: 'America',
+        image: 'img/2.jpg',
+        link: 'https://www.visittheusa.com/'
+    },
+    {
+        name: 'Almanya',
+        image: 'img/3.jpg',
+        link: 'https://www.germany.travel/en/home.html'
+    }
+];
+
+var index = 0;
+var slaytCount = models.length;
+var interval;
+
+var settings = {
+    duration: '2000',
+    random: false
+};
+
+init(settings);
+
+document.querySelector('.carousel-control-prev-icon').addEventListener('click', function() {
+    index--;
+    showSlide(index);
+    console.log(index);
+});
+
+document.querySelector('.carousel-control-next-icon').addEventListener('click', function() {
+    index++;
+    showSlide(index);
+    console.log(index);
+});
+
+document.querySelectorAll('.arrow').forEach(function(item) {
+    item.addEventListener('mouseenter', function() {
+        clearInterval(interval);
+    })
+});
+
+document.querySelectorAll('.arrow').forEach(function(item) {
+    item.addEventListener('mouseleave', function() {
+        init(settings);
+    })
+});
+
+
+function init(settings) {
+
+    let prev;
+    interval = setInterval(() => {
+
+        if (settings.random) {
+            // random index
+            do {
+                index = Math.floor(Math.random() * slaytCount);
+                console.log(index)
+            } while (index == prev)
+            prev = index;
+        } else {
+            // artan index
+            if (slaytCount == index + 1) {
+                index = -1;
+            }
+            showSlide(index);
+            console.log(index);
+            index++;
+        }
+        showSlide(index);
+
+    }, settings.duration)
+
+}
+
+function showSlide(i) {
+
+    index = i;
+
+    if (i < 0) {
+        index = slaytCount - 1;
+    }
+    if (i >= slaytCount) {
+        index = 0;
+    }
+
+    document.querySelector('.car-title').textContent = models[index].name;
+
+    document.querySelector('.card-img-top').setAttribute('src', models[index].image);
+
 }

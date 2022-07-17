@@ -55,6 +55,52 @@
                 </div>
             </div>
         </div>
+
+        <!--* carousel -->
+        <!-- <div id="carousel-display" class="content">
+            <div class="carousel-images">
+                <img src="img/1.jpg">
+                <img src="img/2.jpg">
+                <img src="img/3.jpg">
+                <img src="img/4.jpg">
+                <img src="img/6.jpg">
+            </div>
+            <div class="btm-slides">
+                <span onclick="btm_slide(1)"></span>
+                <span onclick="btm_slide(2)"></span>
+                <span onclick="btm_slide(3)"></span>
+                <span onclick="btm_slide(4)"></span>
+                <span onclick="btm_slide(5)"></span>
+            </div>
+            <div class="sliders left" onclick="side_slide(-1)">
+                <span class="fas fa-angle-left"></span>
+            </div>
+            <div class="sliders right" onclick="side_slide(1)">
+                <span class="fas fa-angle-right"></span>
+            </div>
+        </div> -->
+
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 card-img-top" src="img/1.jpg" alt="First slide">
+                    <div class="carousel-caption">
+                        <a type="button" class="btn btn-outline-dark active cursor-auto">
+                            <p class="car-title">Türkiye</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                <i class="carousel-control-prev-icon arrow"></i>
+            </a>
+            <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                <i class="carousel-control-next-icon arrow"></i>
+            </a>
+        </div>
     </div>
 
     <script src="app.js"></script>
