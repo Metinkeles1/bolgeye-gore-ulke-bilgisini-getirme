@@ -116,7 +116,7 @@ function renderNeighbors(data) {
             <div class="card card-neighbors-bg">                    
                 <img src="${country.flags.png}" class="card-image-top img-fluid">  
                 <div class="card-body">
-                    <p class="card-text">${country.name.common}</p>
+                    <h6 class="card-text">${country.name.common}</h6>
                 </div>
             </div>
         </div>

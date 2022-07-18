@@ -107,20 +107,28 @@ body {
 }
 
 .card-bg {
-    background-color: #2C394B;
-    color: #D2D2D2;
+    /* background-image: linear-gradient(to left, #333333, #ACACAC); */
+    color: #FFFFFF;
+    background: #272530;
 }
 
 .neighbors-bg {
-    background-color: #334756;
-    color: #082032;
+    /* background-image: linear-gradient(to left, #333333, #ACACAC); */
+    background: #272530;
 }
 
 .card-neighbors-bg {
-    background-image: linear-gradient(to left, #082032, #2C394B);
+    /* background-image: linear-gradient(to left, #FFFFFF, #ACACAC); */
+    /* background-color: #ACACAC; */
+    background: #fff;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     margin-top: 10px;
-    color: #D2D2D2;
+    color: #272530;
+}
+
+.details-header-bg {
+    background-color: rgb(51, 51, 51);
+    color: #FFFFFF;
 }
 
 @media only screen and (max-width: 1100px) {
