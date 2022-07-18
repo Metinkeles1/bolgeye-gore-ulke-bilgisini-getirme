@@ -10,7 +10,7 @@ document.querySelectorAll(".text-input").forEach((element) => {
 });
 
 //* country
-let text = document.querySelector("#txtSearch").value = "türk";
+// let text = document.querySelector("#txtSearch").value = "türk";
 
 document.querySelector("#btnSearch").addEventListener("click", () => {
     let text = document.querySelector('#txtSearch').value;
