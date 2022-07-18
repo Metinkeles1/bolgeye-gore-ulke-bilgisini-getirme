@@ -9,40 +9,16 @@ document.querySelectorAll(".text-input").forEach((element) => {
     });
 });
 
-//* carousel
-// let indexValue = 1;
-// showImg(indexValue);
-
-// function btm_slide(e) { showImg(indexValue = e); }
-
-// function side_slide(e) { showImg(indexValue += e); }
-
-// function showImg(e) {
-//     let i;
-//     const img = document.querySelectorAll('img');
-//     const slider = document.querySelectorAll('.btm-slides span');
-//     if (e > img.length) { indexValue = 1 }
-//     if (e < 1) { indexValue = img.length }
-//     for (i = 0; i < img.length; i++) {
-//         img[i].style.display = "none";
-//     }
-//     for (i = 0; i < slider.length; i++) {
-//         slider[i].style.background = "rgba(255,255,255,0.1)";
-//     }
-//     img[indexValue - 1].style.display = "block";
-//     slider[indexValue - 1].style.background = "white";
-// }
-
 //* country
 let text = document.querySelector("#txtSearch").value = "türk";
 
 document.querySelector("#btnSearch").addEventListener("click", () => {
     let text = document.querySelector('#txtSearch').value;
-    console.log(text)
     document.querySelector("#details").style.opacity = 0;
     document.querySelector("#details").style.display = "block";
     document.querySelector("#loading").style.display = "block";
     document.querySelector(".carousel").style.display = "none";
+    clearInterval(interval);
     getCountry(text);
 });
 
@@ -196,13 +172,11 @@ init(settings);
 document.querySelector('.carousel-control-prev-icon').addEventListener('click', () => {
     index--;
     showSlide(index);
-    console.log(index);
 });
 
 document.querySelector('.carousel-control-next-icon').addEventListener('click', () => {
     index++;
     showSlide(index);
-    console.log(index);
 });
 
 document.querySelectorAll('.arrow').forEach((item) => {
@@ -224,19 +198,15 @@ function init(settings) {
     interval = setInterval(() => {
 
         if (settings.random) {
-            // random index
             do {
                 index = Math.floor(Math.random() * slaytCount);
-                console.log(index)
             } while (index == prev)
             prev = index;
         } else {
-            // artan index
             if (slaytCount == index + 1) {
                 index = -1;
             }
             showSlide(index);
-            console.log(index);
             index++;
         }
         showSlide(index);
