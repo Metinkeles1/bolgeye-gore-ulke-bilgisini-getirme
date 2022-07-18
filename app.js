@@ -15,9 +15,7 @@ document.querySelectorAll(".text-input").forEach((element) => {
 document.querySelector("#btnSearch").addEventListener("click", () => {
     let text = document.querySelector('#txtSearch').value;
     document.querySelector("#details").style.opacity = 0;
-    document.querySelector("#details").style.display = "block";
     document.querySelector("#loading").style.display = "block";
-    document.querySelector(".carousel").style.display = "none";
     clearInterval(interval);
     getCountry(text);
 });
@@ -54,10 +52,14 @@ async function onSuccess(position) {
 async function getCountry(country) {
     try {
         const response = await fetch('https://restcountries.com/v3.1/name/' + country);
-        if (!response.ok)
+        if (!response.ok) {
+            document.querySelector("#details").style.display = "none";
+            document.querySelector(".carousel").style.display = "block";
             throw new Error("ülke bulunamadı");
+        }
         const data = await response.json();
         renderCountry(data[0]);
+        // document.querySelector(".carousel").style.display = "block";
 
         const countries = data[0].borders;
         if (!countries)
@@ -73,9 +75,11 @@ async function getCountry(country) {
 }
 
 function renderCountry(data) {
+    document.querySelector("#details").style.display = "block";
     document.querySelector("#loading").style.display = "none";
     document.querySelector("#country-details").innerHTML = "";
     document.querySelector("#neighbors").innerHTML = "";
+    document.querySelector(".carousel").style.display = "none";
 
     let html = `                   
         <div class="col-12 col-md-4 d-flex justify-content-center">
