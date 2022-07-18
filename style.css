@@ -122,3 +122,9 @@ body {
     margin-top: 10px;
     color: #D2D2D2;
 }
+
+@media only screen and (max-width: 990px) {
+    .card-neighbors-bg img {
+        height: 100px;
+    }
+}
