@@ -116,7 +116,7 @@ function renderNeighbors(data) {
     let html = "";
     for (let country of data) {
         html += `
-        <div class="col-6 col-md-4 col-lg-3 mt-2">
+        <div class="col-6 col-md-4 col-lg-2 mt-2">
             <div class="card card-neighbors-bg">                    
                 <img src="${country.flags.png}" class="card-image-top img-fluid">  
                 <div class="card-body">
