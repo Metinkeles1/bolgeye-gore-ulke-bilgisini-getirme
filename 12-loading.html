@@ -14,33 +14,60 @@
 
 <body>
 
-    <div class="container">
-        <div id="errors"></div>
-        <div class="input-container my-3">
-            <input type="text" id="txtSearch" class="text-input mx-2" autocomplete="off" placeholder="Enter Country" required />
-            <label class="label mx-2" id="">Enter Country</label>
-            <button id="btnSearch" type="button" class="btn btn-outline-light">Yükle</button>
-            <button id="btnLocation" type="button" class="btn btn-outline-light mx-2">
+    <header class="main-header">
+        <div id="main-nav" class="container">
+            <a href="#" class="main-header__logo">MovieApp</a>
+            <nav class="main-nav">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item">
+                        <a href="#">Filmler</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#">Diziler</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--login">
+                        <a class="btn btn-secondary" href="#">Login</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="#" onclick="displayMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container ">
+        <div class="country-data">
+            <div id="errors"></div>
+            <div class="input-container my-3">
+                <input type="text" id="txtSearch" class="text-input mx-2" autocomplete="off" placeholder="Enter Country" required />
+                <label class="label mx-2" id="">Enter Country</label>
+                <button id="btnSearch" type="button" class="btn btn-outline-light">Yükle</button>
+                <button id="btnLocation" type="button" class="btn btn-outline-light mx-2">
                 <i class="fa-solid fa-location-crosshairs"></i>
             </button>
-        </div>
+            </div>
 
-        <div id="loading" class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
+            <div id="loading" class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
 
-        <div id="details">
-            <div class="card mb-3 card-bg d-flex">
-                <div class="card-header d-flex justify-content-start details-header-bg">Arama Sonucu</div>
-                <div class="card-body">
-                    <div class="row align-items-center" id="country-details">
+            <div id="details">
+                <div class="card mb-3 card-bg d-flex">
+                    <div class="card-header d-flex justify-content-start details-header-bg">Arama Sonucu</div>
+                    <div class="card-body">
+                        <div class="row align-items-center" id="country-details">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card mb-3 neighbors-bg">
-                <div class="card-header d-flex justify-content-start details-header-bg">Komşu Ülkeler</div>
-                <div class="card-body">
-                    <div class="row align-items-center" id="neighbors">
+                <div class="card mb-3 neighbors-bg">
+                    <div class="card-header details-header-bg">Komşu Ülkeler</div>
+                    <div class="card-body">
+                        <div class="row " id="neighbors">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,7 +82,7 @@
                     <img class="d-block w-100 card-img-top" src="img/1.jpg" alt="First slide">
                     <div class="carousel-caption">
                         <a type="button" class="btn btn-outline-dark active cursor-auto">
-                            <p class="car-title">Türkiye</p>
+                            <p class="card-title">Türkiye</p>
                         </a>
                     </div>
                 </div>

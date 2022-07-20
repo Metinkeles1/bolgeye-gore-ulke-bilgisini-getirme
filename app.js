@@ -230,7 +230,7 @@ showSlide = (i) => {
         index = 0;
     }
 
-    document.querySelector('.car-title').textContent = models[index].name;
+    document.querySelector('.card-title').textContent = models[index].name;
 
     document.querySelector('.card-img-top').setAttribute('src', models[index].image);
 
