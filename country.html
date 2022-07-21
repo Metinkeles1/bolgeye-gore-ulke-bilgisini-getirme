@@ -14,24 +14,24 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between">
-        <a href="#" class="navbar-brand mx-4">
-            <i class="fa-solid fa-house"></i>
+    <nav class="navbar navbar-expand-md navbar_bg d-flex justify-content-between">
+        <a href="#" class="navbar-brand mx-3">
+            <i class="fa-solid fa-house nav_link_house"></i>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
-                <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
+                <span class="navbar-toggler-icon "></span>
             </button>
-        <div id="mobile" class="collapse navbar-collapse">
+        <div id="mobile" class="collapse navbar-collapse ">
 
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link nav_link_bg mx-1">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Blogs</a>
+                    <a href="#" class="nav-link nav_link_bg mx-1">Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link nav_link_bg mx-1">Contact</a>
                 </li>
             </ul>
             <form class="d-flex mx-4">
@@ -49,8 +49,8 @@
             <div class="input-container my-3">
                 <input type="text" id="txtSearch" class="text-input mx-2" autocomplete="off" placeholder="Enter Country" required />
                 <label class="label mx-2" id="">Enter Country</label>
-                <button id="btnSearch" type="button" class="btn btn-outline-light">Yükle</button>
-                <button id="btnLocation" type="button" class="btn btn-outline-light mx-2">
+                <button id="btnSearch" type="button" class="btn country-button">Yükle</button>
+                <button id="btnLocation" type="button" class="btn country-button mx-2">
                 <i class="fa-solid fa-location-crosshairs"></i>
             </button>
             </div>
