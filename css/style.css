@@ -9,7 +9,7 @@ body {
     /* display: flex; */
     /* place-items: center; */
     height: 100vh;
-    background-image: linear-gradient(to left bottom, rgba(25, 22, 84, 0.7), rgba(67, 198, 172, 0.7)), url(1.jpg);
+    background-image: linear-gradient(to left bottom, rgba(25, 22, 84, 0.7), rgba(67, 198, 172, 0.7)), url(img/bgImg.jpg);
 }
 
 
