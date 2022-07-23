@@ -16,8 +16,8 @@ body {
 }
 
 .card-country {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 213px;
     display: grid;
     grid-template-rows: minmax(100%, 1fr);
     grid-template-areas: "stack";
