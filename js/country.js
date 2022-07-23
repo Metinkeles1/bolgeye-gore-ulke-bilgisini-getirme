@@ -14,13 +14,26 @@ const removeActiveClasses = () => {
 };
 
 //* country data
-async function listCountry() {
-    const response = await fetch('https://restcountries.com/v3.1/region/americas');
+
+function getRegion() {
+    const btnCountries = document.querySelector('.btnCountriesAll');
+    btnCountries.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-countries')) {
+            let region = e.target.textContent.split("/");
+            listCountry(region[1])
+        }
+    })
+}
+
+async function listCountry(region) {
+    console.log(region)
+    const response = await fetch('https://restcountries.com/v3.1/region/' + region);
     const data = await response.json();
     displayCountry(data);
 }
 
-listCountry();
+getRegion();
+
 
 function displayCountry(allCountries) {
     console.log(allCountries)
