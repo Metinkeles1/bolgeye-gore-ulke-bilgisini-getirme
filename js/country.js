@@ -1,5 +1,21 @@
+const panels = document.querySelectorAll(".panel");
+
+panels.forEach((panel) => {
+    panel.addEventListener("click", () => {
+        removeActiveClasses();
+        panel.classList.add("active");
+    });
+});
+
+const removeActiveClasses = () => {
+    panels.forEach((panel) => {
+        panel.classList.remove("active");
+    });
+};
+
+//* country data
 async function listCountry() {
-    const response = await fetch('https://restcountries.com/v3.1/region/europe');
+    const response = await fetch('https://restcountries.com/v3.1/region/americas');
     const data = await response.json();
     displayCountry(data);
 }
@@ -12,7 +28,7 @@ function displayCountry(allCountries) {
     for (let country of allCountries) {
         console.log(country)
         html += `
-        <div class="card-country col-2 my-2">
+        <div class="card-country my-4 mx-4">
                 <img src="${country.flags.png}" id="countryImg" class="img-fluid">
                 <div class="card card-country-body">
                     <div id="countryTitle" class="card-title card-country-header">
