@@ -36,7 +36,7 @@ getRegion();
 
 
 function displayCountry(allCountries) {
-    console.log(allCountries)
+    document.querySelector("#loading").style.display = "none";
     let html = "";
     for (let country of allCountries) {
         console.log(country)
