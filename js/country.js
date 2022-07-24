@@ -19,6 +19,7 @@ function getRegion() {
     const btnCountries = document.querySelector('.btnCountriesAll');
     btnCountries.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-countries')) {
+            document.querySelector(".loading-center").style.display = "block";
             let region = e.target.textContent.split("/");
             listCountry(region[1])
         }
@@ -26,20 +27,26 @@ function getRegion() {
 }
 
 async function listCountry(region) {
-    console.log(region)
-    const response = await fetch('https://restcountries.com/v3.1/region/' + region);
-    const data = await response.json();
-    displayCountry(data);
+    try {
+        const response = await fetch('https://restcountries.com/v3.1/region/' + region);
+        if (!response.ok) {
+            document.querySelector(".loading-center").style.display = "none";
+        }
+        const data = await response.json();
+        displayCountry(data);
+    } catch (error) {
+        console.log(error)
+    }
+
 }
 
 getRegion();
 
 
 function displayCountry(allCountries) {
-    document.querySelector("#loading").style.display = "none";
+    document.querySelector(".loading-center").style.display = "none";
     let html = "";
     for (let country of allCountries) {
-        console.log(country)
         html += `
         <div class="card-country my-4 mx-4">
                 <img src="${country.flags.png}" id="countryImg" class="img-fluid">
