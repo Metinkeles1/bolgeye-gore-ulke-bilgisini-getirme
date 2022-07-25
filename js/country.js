@@ -49,7 +49,7 @@ function displayCountry(allCountries) {
     let html = "";
     for (let country of allCountries) {
         html += `
-        <div class="card-country my-4 mx-4">
+        <div class="card-country col-3 my-4 mx-4">
                 <img src="${country.flags.png}" id="countryImg" class="img-fluid">
                 <div class="card card-country-body">
                     <div id="countryTitle" class="card-title card-country-header">
