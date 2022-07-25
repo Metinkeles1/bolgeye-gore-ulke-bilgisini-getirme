@@ -11,54 +11,48 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar_bg d-flex justify-content-between">
-        <a href="#" class="navbar-brand mx-3">
-            <i class="fa-solid fa-house nav_link_house"></i>
-        </a>
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-        <div id="mobile" class="collapse navbar-collapse ">
-
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link nav_link_bg mx-1">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link nav_link_bg mx-1">Blogs</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link nav_link_bg mx-1">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar">
+        <label class="logo">CodingNepal</label>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="active" href="#">Home</a></li>
+            <li>
+                <a href="#">Features
+              </a>
+            </li>
+            <li>
+                <a href="#">Web Design
+              </a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
     </nav>
 
-    <div class="btnCountriesAll my-2 mx-2">
-        <div class="panel active" style="background-image: url('img/regionImg/africas.jpg');">
-            <h3 class="panel-header px-3">Africa</h3>
-            <button type="button" class="btn btn-dark active btn-lg btn-countries active">Show/Africa</button>
-        </div>
-        <div class="panel" style="background-image: url('img/regionImg/americas2.jpg');">
-            <h3 class="panel-header px-3">Americas</h3>
-            <button type="button" class="btn btn-dark btn-lg btn-countries">Show/Americas</button>
-        </div>
-        <div class="panel" style="background-image: url('img/regionImg/asia2.jpg');">
-            <h3 class="panel-header px-3">Asia</h3>
-            <button type="button" class="btn btn-dark btn-lg btn-countries">Show/Asia</button>
-        </div>
-        <div class="panel" style="background-image: url('img/regionImg/europe2.jpg');">
-            <h3 class="panel-header px-3">Europe</h3>
-            <button type="button" class="btn btn-dark btn-lg btn-countries">Show/Europe</button>
-        </div>
-        <div class="panel" style="background-image: url('img/regionImg/oceania.jpg');">
-            <h3 class="panel-header px-3">Ocenia</h3>
-            <button type="button" class="btn btn-dark btn-lg btn-countries">Show/Oceania</button>
-        </div>
-    </div>
 
 
-    <div class="container my-3">
+    <div class="container my-3 country-position">
+        <div class="btnCountriesAll">
+            <div class="panel active" style="background-image: url('img/regionImg/africas.jpg');">
+                <h3 class="panel-header px-3">Africa</h3>
+                <button type="button" class="btn active btn-lg btn-countries active">Show/Africa</button>
+            </div>
+            <div class="panel" style="background-image: url('img/regionImg/americas.jpg');">
+                <h3 class="panel-header px-3">Americas</h3>
+                <button type="button" class="btn btn-lg btn-countries">Show/Americas</button>
+            </div>
+            <div class="panel" style="background-image: url('img/regionImg/asia.jpg');">
+                <h3 class="panel-header px-3">Asia</h3>
+                <button type="button" class="btn btn-lg btn-countries">Show/Asia</button>
+            </div>
+            <div class="panel" style="background-image: url('img/regionImg/europe2.jpg');">
+                <h3 class="panel-header px-3">Europe</h3>
+                <button type="button" class="btn btn-lg btn-countries">Show/Europe</button>
+            </div>
+            <div class="panel" style="background-image: url('img/regionImg/oceania.jpg');">
+                <h3 class="panel-header px-3">Ocenia</h3>
+                <button type="button" class="btn btn-lg btn-countries">Show/Oceania</button>
+            </div>
+        </div>
 
         <!--* loading -->
         <div class="loading-center">

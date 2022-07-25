@@ -11,10 +11,9 @@
 
 :root {
     --white: #fff;
-    --primary: #2980b9;
-    --primary2: #00ADB5;
-    --secondary: #222831;
-    --secondary2: #393E46;
+    --primary: #4DC3FF;
+    --secondary: #D9EAF2;
+    --secondary2: #407DD4;
     --success: #28a745;
     --danger: #dc3545;
     --warning: #ffc107;
@@ -68,6 +67,10 @@
 
 .bg-secondary {
     background-color: var(--secondary);
+}
+
+.bg-secondary2 {
+    background-color: var(--secondary2);
 }
 
 .bg-success {
