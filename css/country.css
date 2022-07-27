@@ -24,41 +24,10 @@ body {
 }
 
 
-/** navbar */
+/** navbar header*/
 
-nav .logo {
-    color: white;
-    font-size: 33px;
-    font-weight: bold;
-    line-height: 70px;
-    padding-left: 110px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    background: #063247;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    color: white;
-    display: block;
-    padding: 0 15px;
-    line-height: 70px;
-    font-size: 20px;
-    background: #063247;
-    transition: .5s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #23dbdb;
+.navbar-header {
+    font-size: 3rem;
 }
 
 
@@ -101,7 +70,7 @@ nav ul li a.active {
 
 .panel h3 {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 3rem;
     position: absolute;
     bottom: 10px;
     left: 20px;
@@ -110,7 +79,7 @@ nav ul li a.active {
 }
 
 .panel button {
-    font-size: 18px;
+    font-size: 1.8rem;
     position: absolute;
     bottom: 10px;
     right: 20px;
