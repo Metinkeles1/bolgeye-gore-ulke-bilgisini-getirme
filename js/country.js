@@ -47,35 +47,67 @@ getRegion();
 function displayCountry(allCountries) {
     document.querySelector(".loading-center").style.display = "none";
     let html = "";
-    for (let country of allCountries) {
+
+    for (let i = 0; i < 12; i++) {
         html += `
         <div class="card-country col-3 my-4 mx-4">
-                <img src="${country.flags.png}" id="countryImg" class="img-fluid">
+                <img src="${allCountries[i].flags.png}" id="countryImg" class="img-fluid">
                 <div class="card card-country-body">
                     <div id="countryTitle" class="card-title card-country-header">
-                        <h3 class="my-2">${country.name.common}</h3>
+                        <h3 class="my-2">${allCountries[i].name.common}</h3>
                     </div>
                     <div id="countyrText" class="card-text card-country-text mx-2">
                         <div class="my-2">
                             <div class="d-inline">Başkent: </div>
-                            <div class="d-inline">${country.capital}</div>
+                            <div class="d-inline">${allCountries[i].capital}</div>
                         </div>
                         <div class="my-2">
                             <div class="d-inline">Bölge: </div>
-                            <div class="d-inline">${country.region}</div>
+                            <div class="d-inline">${allCountries[i].region}</div>
                         </div>
                         <div class="my-2">
                             <div class="d-inline">Popülasyon: </div>
-                            <div class="d-inline">${(country.population / 1000000).toFixed(1)} milyon</div>
+                            <div class="d-inline">${(allCountries[i].population / 1000000).toFixed(1)} milyon</div>
                         </div>
                         <div class="my-2">
                             <div class="d-inline">Para Birimi: </div>
-                            <div class="d-inline">${Object.values(country.currencies)[0].name} (${Object.values(country.currencies)[0].symbol})</div>
+                            <div class="d-inline">${Object.values(allCountries[i].currencies)[0].name} (${Object.values(allCountries[i].currencies)[0].symbol})</div>
                         </div>
                     </div>
                 </div>
         </div>
         `;
     }
+
+    // for (let country of allCountries) {
+    //     html += `
+    //     <div class="card-country col-3 my-4 mx-4">
+    //             <img src="${country.flags.png}" id="countryImg" class="img-fluid">
+    //             <div class="card card-country-body">
+    //                 <div id="countryTitle" class="card-title card-country-header">
+    //                     <h3 class="my-2">${country.name.common}</h3>
+    //                 </div>
+    //                 <div id="countyrText" class="card-text card-country-text mx-2">
+    //                     <div class="my-2">
+    //                         <div class="d-inline">Başkent: </div>
+    //                         <div class="d-inline">${country.capital}</div>
+    //                     </div>
+    //                     <div class="my-2">
+    //                         <div class="d-inline">Bölge: </div>
+    //                         <div class="d-inline">${country.region}</div>
+    //                     </div>
+    //                     <div class="my-2">
+    //                         <div class="d-inline">Popülasyon: </div>
+    //                         <div class="d-inline">${(country.population / 1000000).toFixed(1)} milyon</div>
+    //                     </div>
+    //                     <div class="my-2">
+    //                         <div class="d-inline">Para Birimi: </div>
+    //                         <div class="d-inline">${Object.values(country.currencies)[0].name} (${Object.values(country.currencies)[0].symbol})</div>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //     </div>
+    //     `;
+    // }
     document.querySelector('#countriesAll').innerHTML = html;
 }
