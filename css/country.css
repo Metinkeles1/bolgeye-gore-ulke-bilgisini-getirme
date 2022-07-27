@@ -12,6 +12,7 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,11 +24,70 @@ body {
     justify-content: center;
 }
 
+ul {
+    list-style: none;
+}
 
-/** navbar header*/
+a {
+    color: #333;
+    text-decoration: none;
+}
 
-.navbar-header {
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+/** navbar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark);
+    opacity: 0.8;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 0 .5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--warning);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar .brand {
+    font-weight: 400;
+}
+
+.navbar h1 {
     font-size: 3rem;
+}
+
+.navbar span {
+    color: var(--warning);
 }
 
 
@@ -78,7 +138,7 @@ body {
     opacity: 0;
 }
 
-.panel button {
+.panel a {
     font-size: 1.8rem;
     position: absolute;
     bottom: 10px;
@@ -91,16 +151,16 @@ body {
     flex: 5;
 }
 
-.panel button {
+.panel a {
     display: none;
 }
 
-.panel.active button {
+.panel.active a {
     display: block;
 }
 
 .panel.active h3,
-.panel.active button {
+.panel.active a {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
@@ -239,6 +299,11 @@ span {
 .details-country {
     display: none;
     justify-content: end;
+}
+
+.country-details-btn {
+    font-size: 2.0rem;
+    border-radius: 10px;
 }
 
 @media (max-width: 480px) {

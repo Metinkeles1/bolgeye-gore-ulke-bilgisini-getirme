@@ -22,6 +22,7 @@ function getRegion() {
             document.querySelector(".loading-center").style.display = "block";
             let region = e.target.textContent.split("/");
             listCountry(region[1])
+            e.target.href = "#countriesAll";
         }
     })
 }
@@ -50,12 +51,13 @@ function renderCountries(allCountries) {
     for (let i = 0; i < 12; i++) firstDisplayCountry.push(allCountries[i]);
     detailsCountryBtn.addEventListener('click', () => {
         click++;
-        detailsCountryBtn.textContent = "Gizle";
+        detailsCountryBtn.textContent = "Hidden";
         if (click % 2 === 0) {
             for (let i = 12; i < allCountries.length; i++) detailsCountry.push(allCountries[i]);
             displayCountry(firstDisplayCountry.concat(detailsCountry))
         } else {
             displayCountry(firstDisplayCountry);
+            detailsCountryBtn.textContent = "Show";
         }
     })
     displayCountry(firstDisplayCountry);
