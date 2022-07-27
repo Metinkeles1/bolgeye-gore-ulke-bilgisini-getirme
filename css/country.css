@@ -236,6 +236,11 @@ span {
     transform: none;
 }
 
+.details-country {
+    display: none;
+    justify-content: end;
+}
+
 @media (max-width: 480px) {
     .panel:nth-of-type(4),
     .panel:nth-of-type(5) {
