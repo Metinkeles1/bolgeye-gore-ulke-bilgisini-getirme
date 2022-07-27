@@ -26,6 +26,8 @@ function getRegion() {
     })
 }
 
+getRegion();
+
 async function listCountry(region) {
     try {
         const response = await fetch('https://restcountries.com/v3.1/region/' + region);
@@ -33,27 +35,28 @@ async function listCountry(region) {
             document.querySelector(".loading-center").style.display = "none";
         }
         const data = await response.json();
-        // displayCountry(data)
         renderCountries(data);
     } catch (error) {
         console.log(error)
     }
-
-
 }
 
-getRegion();
-
 function renderCountries(allCountries) {
+    let click = 1;
     const detailsCountryBtn = document.querySelector('#detailsCountry');
     detailsCountryBtn.parentElement.style.display = "flex";
     let firstDisplayCountry = [];
     let detailsCountry = [];
     for (let i = 0; i < 12; i++) firstDisplayCountry.push(allCountries[i]);
     detailsCountryBtn.addEventListener('click', () => {
-        for (let i = 12; i < allCountries.length; i++) detailsCountry.push(allCountries[i]);
-        console.log(detailsCountry)
-        displayCountry(firstDisplayCountry.concat(detailsCountry))
+        click++;
+        detailsCountryBtn.textContent = "Gizle";
+        if (click % 2 === 0) {
+            for (let i = 12; i < allCountries.length; i++) detailsCountry.push(allCountries[i]);
+            displayCountry(firstDisplayCountry.concat(detailsCountry))
+        } else {
+            displayCountry(firstDisplayCountry);
+        }
     })
     displayCountry(firstDisplayCountry);
 }
