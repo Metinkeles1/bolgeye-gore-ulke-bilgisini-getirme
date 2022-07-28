@@ -27,7 +27,7 @@ ul {
 }
 
 a {
-    color: #333;
+    /* color: #333; */
     text-decoration: none;
 }
 
@@ -85,23 +85,21 @@ img {
 }
 
 .myNavbar span {
-    color: var(--warning);
+    /* color: var(--warning); */
 }
-
-
-/** asdasd*/
 
 
 /* header */
 
 .main-header {
+    position: relative;
     justify-content: center;
     height: 100vh;
     color: #fff;
-    position: relative;
 }
 
 .main-header .content {
+    position: relative;
     margin-top: 50px;
     align-items: center;
     justify-content: center;
