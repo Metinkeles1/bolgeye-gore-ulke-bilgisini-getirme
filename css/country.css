@@ -48,9 +48,6 @@ img {
 
 /** myNavbar */
 
-
-/* myNavbar */
-
 .myNavbar {
     display: flex;
     align-items: center;
@@ -98,21 +95,15 @@ img {
 /* header */
 
 .main-header {
-    background-image: url('../img/bg-1.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    justify-content: center;
     height: 100vh;
     color: #fff;
     position: relative;
 }
 
-.main-header.blog {
-    background-image: url('../img/bg-2.jpeg');
-    height: 50vh;
-}
-
 .main-header .content {
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
