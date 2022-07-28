@@ -6,8 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
 }
 
 html {
@@ -50,6 +48,9 @@ img {
 
 /** navbar */
 
+
+/* navbar */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -58,7 +59,7 @@ img {
     opacity: 0.8;
     color: #fff;
     position: fixed;
-    /* top: 0; */
+    top: 0;
     width: 100%;
     height: 70px;
     padding: 0 3rem;
@@ -86,9 +87,11 @@ img {
     font-size: 3rem;
 }
 
+
+/* 
 .navbar span {
     color: var(--warning);
-}
+} */
 
 
 /** panel */
