@@ -117,7 +117,7 @@ img {
     background: rgba(0, 0, 0, 0.6)
 }
 
-.main-header * {
+.main-header .myNavbar {
     z-index: 5;
 }
 
