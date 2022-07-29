@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     /* display: flex; */
@@ -155,7 +155,7 @@ img {
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
-    flex: 0.5;
+    flex: 0.6;
     margin: 10px;
     position: relative;
     transition: flex 0.7s ease-in;
