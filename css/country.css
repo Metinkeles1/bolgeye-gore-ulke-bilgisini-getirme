@@ -208,7 +208,7 @@ img {
 /** loading */
 
 .loading-center {
-    display: block;
+    display: none;
 }
 
 .center {
